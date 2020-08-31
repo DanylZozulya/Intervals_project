@@ -1,6 +1,6 @@
 #include "SetIntervals.h"
 
-//цикл для зображення массиву інтервалів
+//loop to display an array of intervals
 void print_set(SetIntervals* set)
 {
     Interval* tmp1;
@@ -10,8 +10,7 @@ void print_set(SetIntervals* set)
     }
 }
 
-//спроба реалізувати видалення з масиву повторювані інтервали
-//функція не працює коректно
+
 void rmdup(SetIntervals* set)
 {
     Interval *current ;
@@ -38,10 +37,6 @@ void rmdup(SetIntervals* set)
 }
 
 
-//функція визначення  об`єднання масивів інтервалів
-//ідея полягала у визначенні об`єднання кожного інтервала першого массиву з кожним з другого
-//потім видалення з отриманого массиву різниці кожних двох інтервалі
-//і отримання кінцевого об`єднання
 SetIntervals* set_mult(SetIntervals* ints1,SetIntervals* ints2)
 {
     int count = 0;
@@ -108,9 +103,6 @@ SetIntervals* set_mult(SetIntervals* ints1,SetIntervals* ints2)
 }
 
 
-//Функція знаходження перетину масивів інтервалів
-//Аналогічно знаходимо перетини кожного інтервала першого массиву з кожним з другого
-//якщо хоча б один з перетинів порожній інтервал, то перетин масивів теж порожній інтервал
 SetIntervals* set_add(SetIntervals* ints1, SetIntervals* ints2)
 {
     int count = 0;
@@ -149,7 +141,6 @@ SetIntervals* set_add(SetIntervals* ints1, SetIntervals* ints2)
 }
 
 
-//Функція знаходження різниці масивів інтервалів
 SetIntervals* set_dif(SetIntervals* ints1, SetIntervals* ints2)
 {
     int count = 0;
